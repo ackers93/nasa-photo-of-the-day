@@ -1,14 +1,26 @@
 import React from "react";
+import NasaList from "./components/NasaList"
 import "./App.css";
+import NasaNav from "./components/NavBar";
+import styled from 'styled-components';
+
+const WrapperDiv = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+`;
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <WrapperDiv>
+        <NasaNav />
+        <NasaList />
+      </WrapperDiv>
     </div>
+
   );
 }
 
