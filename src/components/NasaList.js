@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import NasaCard from "./NasaCard"
 import axios from "axios";
+import styled from "styled-components";
+
 
 export default function NasaList() {
     const [photo, setPhoto] = useState([]);
@@ -18,12 +20,18 @@ export default function NasaList() {
             });
     }, []);
 
+    const PhotoCard = styled.div`
+    border: 4px solid lightgrey;
+    margin: 20px;
+    background-color: #393D3F;
+    `
+
     return (
-        <div className="photo-card">
+        <PhotoCard>
             <NasaCard
                 photo={photo}
             />
-        </div>
+        </PhotoCard>
     );
 
 }
